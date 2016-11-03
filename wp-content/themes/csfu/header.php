@@ -26,7 +26,7 @@
 					</div>
 				</div>
 			</div>
-			<h4 id="slogan">Fairfield University Computer Science</h4>
+			<h5 id="slogan">Fairfield University Computer Science</h5>
 		</div>
 	</div>
 </div>
