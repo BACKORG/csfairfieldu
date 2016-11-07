@@ -120,5 +120,10 @@
 	</div>
 </div>
 
+<div class="img-bg clearfix">
+	<img src="<?=get_bloginfo('template_directory');?>/images/img-8.jpg"" />
+	<h2>Leading Together for Brighter Future</h2>
+</div>
+
 <!-- get footer content -->
 <?php get_footer(); ?>

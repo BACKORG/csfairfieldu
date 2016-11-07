@@ -188,6 +188,46 @@ input{
 	}
 }
 
+.img-bg{
+	position:relative;
+	text-align:center;
+	margin:20px 0;
+	img{height:300px;width:100%;opacity:0.5;}
+	h2{position:absolute;top:20px;left:50px;color:#fff;}
+}
+
+footer{
+    background-color: #62462d;
+    padding: 20px;
+    display: block;
+    color: #fff;
+
+    small, .footer-social{
+        margin-top: 5px;
+    }
+
+    .fa{
+        display: inline-block;
+        background: #775d45;
+        color: #ddd;
+        font-size: 12px;
+        text-decoration: none;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        margin-right: 10px;
+        cursor: pointer;
+        @include css3(transition, all .6s ease-in-out);
+
+        &:hover{
+            text-decoration: none;
+            background: #b93434;
+        }
+    }
+}
+
+
 /* phone devices */
 @media screen and  (max-width: $screen-sm-min) {
   

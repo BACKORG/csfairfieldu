@@ -21,6 +21,8 @@ function theme_assets() {
 
 	// load javascript
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
+	wp_enqueue_script( 'img-scroll-js', get_template_directory_uri() . '/js/jquery.imageScroll.min.js', array(), '', true );
+	
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'theme_assets' );
