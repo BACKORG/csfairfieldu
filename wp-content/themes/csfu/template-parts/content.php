@@ -1,9 +1,9 @@
 <?php
 /**
- * The template used for displaying page content
+ * The template used for displaying the list of posts
  */
 ?>
-<div class="waterfall-item">
+<div class="post-item">
     <article class="individual-post">
         <div class="top-wrap">
             <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
@@ -21,9 +21,7 @@
 
         <section class="post-content">
             <?php
-                $words = explode(' ',strip_tags(get_the_content(), '<p><br><div><img>'));
-                $content = implode(' ',array_splice($words,0,60));
-                echo $content.' ...';
+                echo get_the_content();
             ?>
         </section>
 

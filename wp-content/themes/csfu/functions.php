@@ -27,3 +27,16 @@ function theme_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_assets' );
 
+
+
+/**
+ * generate share html
+ * @return [type] [description]
+ */
+function generate_shares($postId){
+	$str = '<a target="_blank" href="http://www.facebook.com/sharer.php?u='.get_permalink($postId).'" class="fa fa-facebook" title="Share on Facebook"></a>
+            <a target="_blank" href="http://twitter.com/home?status='.get_permalink($postId).'" class="fa fa-twitter" title="Share on Twitter"></a>
+            <a target="_blank" href="http://plus.google.com/share?url='.get_permalink($postId).'" class="fa fa-google-plus" title="Share on Google+"></a>
+            <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url='.get_permalink($postId).'" class="fa fa-linkedin" title="Share on LinkedIn""></a>';
+	echo $str;
+}
