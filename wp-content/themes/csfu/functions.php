@@ -17,6 +17,7 @@ function theme_assets() {
 	// load css
 	wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . '/css/fontawesome.css' );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.css' );
+    wp_enqueue_style( 'team-css', get_template_directory_uri() . '/team.css', false, time() );
 	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/style.css', false, time() );
 
 	// load javascript
@@ -40,3 +41,5 @@ function generate_shares($postId){
             <a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url='.get_permalink($postId).'" class="fa fa-linkedin" title="Share on LinkedIn""></a>';
 	echo $str;
 }
+
+
