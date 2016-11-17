@@ -21,7 +21,7 @@
 				<div class="form-group">
 					<div class="input-group search-group">
 						<div class="input-group-addon"><i class='fa fa-search'></i></div>
-						<form role="search" method="get" class="search-form" action="">
+						<form role="search" method="get" class="search-form" action="/">
 							<input type="search" class="search-field form-control" placeholder="Search …" value="<?=isset($_GET['s'])?$_GET['s']:'';?>" name="s" id="search-data">
 							<input type="submit" class="search-submit btn btn-default" value="Search" >
 						</form>
