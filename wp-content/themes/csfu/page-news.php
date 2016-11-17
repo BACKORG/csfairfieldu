@@ -6,24 +6,27 @@ get_header(); ?>
 
 <div class="content-page-wrap">
     <div class="container">
-    	<h2 class="page-news-title">Latest News:</h2>
     	
-    	<div class="col-md-8">
-			<?php
-				if (is_page()) {
-				  	$posts = get_posts ("showposts=5");
-				  	if ($posts) {
-				    foreach ($posts as $post):
-				      	setup_postdata($post); 
-				      	get_template_part( 'template-parts/content', get_post_format() );
-				    endforeach;
-				  }
-				}
-			?>
-		</div>
-		
-		<div class="col-md-4 right-sidebar">
-			<?php include 'sidebar.php';?>
+    	<div class="col-md-12">
+    		<?php
+	    		if (is_page()) {
+		            global $query_string;
+		            $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+		            query_posts ('posts_per_page=2&paged='.$paged);
+		            while ( have_posts() ) : the_post();
+		                get_template_part( 'template-parts/content', get_post_format() );
+		            endwhile;
+	    		}
+	        ?>
+	        
+	         <div class="page-wrap">
+		        <?php
+		            the_posts_pagination([
+		                'screen_reader_text' => ' ', 
+		                'mid_size' => 2,
+		            ]);
+		        ?>
+		    </div>
 		</div>
 	</div>
 </div>		

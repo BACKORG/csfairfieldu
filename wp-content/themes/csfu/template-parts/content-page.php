@@ -4,13 +4,10 @@
  */
 get_header(); ?>
 
-<div class="content-page-wrap">
     <div class="container">
         <div class="page-content">
             <?php the_content(); ?>
         </div>
-
     </div>
-</div>
 
 <?php get_footer(); ?>

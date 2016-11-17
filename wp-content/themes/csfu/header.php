@@ -19,10 +19,12 @@
 		<div class='col-md-6 top-header-2'>
 			<div>
 				<div class="form-group">
-					<label class="sr-only" for="search-data">Amount (in dollars)</label>
-					<div class="input-group">
+					<div class="input-group search-group">
 						<div class="input-group-addon"><i class='fa fa-search'></i></div>
-						<input type="text" class="form-control" id="search-data" placeholder="search...">
+						<form role="search" method="get" class="search-form" action="">
+							<input type="search" class="search-field form-control" placeholder="Search …" value="<?=isset($_GET['s'])?$_GET['s']:'';?>" name="s" id="search-data">
+							<input type="submit" class="search-submit btn btn-default" value="Search" >
+						</form>
 					</div>
 				</div>
 			</div>
